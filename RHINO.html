@@ -1,95 +1,10 @@
 <!DOCTYPE html>
-<!-- saved from url=(0059)http://rhinopotency.xcartpro.com/m8/?off=qrXpTYZr&lnk=64328 -->
 <html lang="ar" nighteye="disabled" data-lt-installed="true"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <script src="./RHINO_files/jquery.min.js.download"></script>
 
-    <script>
-    function set_validator_errors(){
-        orderValidator.errorTitle = 'يرجى تصحيح الأخطاء التالية'; 
-
-        orderValidator.errorNameField = 'الاسم'; 
-        orderValidator.errorNameMess = 'أدخل أسمك'; 
-        
-        orderValidator.errorPhoneField = 'رقم التليفون'; 
-        orderValidator.errorPhoneMess = 'أدخل رقم الهاتف الصحيح'; 
-        
-        orderValidator.errorAddress = 'أدخل العنوان الصحيح'; 
-        orderValidator.errorRequired = 'يتطلب حقلا'; 
-        orderValidator.errorMaxLength = 'حرف {1} بحد أقصى صالح'; 
-        orderValidator.errorMinLength = 'الحد الأدنى لعدد حروف {1}'; 
-        orderValidator.errorEmailField = 'البريد الإلكتروني';
-        orderValidator.errorEmail = 'تم تحديد بريد إلكتروني غير صالح';
-        }
-    </script>
     
-<script>
-
-
-window.app = {
-    timestamp: parseInt((new Date()).getTime() / 1000),
-    jq: jQuery,
-    formAction: window.location.href,
-    leadToken: '6470ea1a3a93d8.18533726',
-    offers: {"33437":{"id":33437,"country":{"code":"DZ","name":"\u0410\u043b\u0436\u0438\u0440"},"price":"5999","price2":"11998","currency":{"code":"DZD","name":"DA"},"discount":"","delivery_price":"","link":"","product_sku":"","prepaid_info_html":""}},
-    currentOffer: {"id":33437,"country":{"code":"DZ","name":"\u0410\u043b\u0436\u0438\u0440"},"price":"5999","price2":"11998","currency":{"code":"DZD","name":"DA"},"discount":"","delivery_price":"","link":"","product_sku":"","prepaid_info_html":""},
-    allowedCountries: ["DZ"],
-    _setOfferId: false,
-    streamHid: '',
-    showcaseUrl: '',
-    disablePhoneMask: Boolean(),
     
-    setOffer: function (offerId) {
-        if (offerId == this._setOfferId) {
-            return ;
-        }
-        this._setOfferId = offerId;
-        if (offerId) {
-            var offer = app.offers[offerId];
-            var previousOffer = app.currentOffer;
-            app.currentOffer = offer;
-            var event = this.jq.Event("offerchange");
-            event.previousOffer = previousOffer;
-            event.currentOffer = app.currentOffer;
-            this.jq(document).trigger(event);
-            this.updatePage(offer);
-        } else {
-            $('input[name=country]').val('');
-        }
-    },
-    
-    updatePage: function(offer) {
-        $('x-newprice').html(offer.price);
-        $('x-oldprice').html(offer.price2);
-        $('x-currency').html(offer.currency.name);
-        $('input[name=offer], select[name=offer]').val(offer.id);
-        $('input[name=country]').val(offer.country.code);
-    },
-
-    blockForm: function() {
-        // Блокируем кнопки при отправке формы
-        $('input[type=submit]', $(this)).prop( 'disabled', true ).attr( 'disabled', true );
-        $('button', $(this)).prop( 'disabled', true ).attr( 'disabled', true );
-        app.incompleteOrder.lock = true;
-        clearTimeout(app.incompleteOrder.timer);
-    },
-
-    unblockForm: function() {
-        $('input[type=submit]', $(this)).prop( 'disabled', false ).attr( 'disabled', false );
-        $('button[type=submit]', $(this)).prop( 'disabled', false ).attr( 'disabled', false );
-        app.incompleteOrder.lock = false;
-        clearTimeout(app.incompleteOrder.timer);
-    }
-
-};
-
-
-</script><script src="./RHINO_files/form.validate.js.download"></script>
-<script src="./RHINO_files/interPhoneCodes.js.download"></script>
-<script src="./RHINO_files/showcase.js.download"></script>
-<script src="./RHINO_files/form.incomplete.js.download"></script>
-<script src="./RHINO_files/main2.js.download"></script>
-
 
 
     
@@ -107,37 +22,37 @@ window.app = {
 
 <div class="row">
             	<div class="col-xs-12 col-xl-12">
-                	<a href="http://rhinopotency.xcartpro.com/m8/?off=qrXpTYZr&amp;lnk=64328#order"><img src="./RHINO_files/1.png" alt=""></a>
+                	<a href="#order"><img src="./RHINO_files/1.png" alt=""></a>
 		
                 </div>
             </div>
 <div class="row">
             	<div class="col-xs-12 col-xl-12">
-                	<a href="http://rhinopotency.xcartpro.com/m8/?off=qrXpTYZr&amp;lnk=64328#order"><img src="./RHINO_files/2.png" alt=""></a>
+                	<a href="#order"><img src="./RHINO_files/2.png" alt=""></a>
 		
                 </div>
             </div>
 <div class="row">
             	<div class="col-xs-12 col-xl-12">
-                	<a href="http://rhinopotency.xcartpro.com/m8/?off=qrXpTYZr&amp;lnk=64328#order"><img src="./RHINO_files/3.png" alt=""></a>
+                	<a href="#order"><img src="./RHINO_files/3.png" alt=""></a>
 		
                 </div>
             </div>
 <div class="row">
             	<div class="col-xs-12 col-xl-12">
-                	<a href="http://rhinopotency.xcartpro.com/m8/?off=qrXpTYZr&amp;lnk=64328#order"><img src="./RHINO_files/4.png" alt=""></a>
+                	<a href="#order"><img src="./RHINO_files/4.png" alt=""></a>
 		
                 </div>
             </div>
 <div class="row">
             	<div class="col-xs-12 col-xl-12">
-                	<a href="http://rhinopotency.xcartpro.com/m8/?off=qrXpTYZr&amp;lnk=64328#order"><img src="./RHINO_files/5.png" alt=""></a>
+                	<a href="#order"><img src="./RHINO_files/5.png" alt=""></a>
 		
                 </div>
             </div>
 <div class="row">
             	<div class="col-xs-12 col-xl-12">
-                	<a href="http://rhinopotency.xcartpro.com/m8/?off=qrXpTYZr&amp;lnk=64328#order"><img src="./RHINO_files/6.png" alt=""></a>
+                	<a href="#order"><img src="./RHINO_files/6.png" alt=""></a>
 		
                 </div>
             </div>
@@ -152,7 +67,7 @@ window.app = {
                 border-radius: 14px;" class="row">
 
                     <div style="padding: 13px;" class="col-lg-12">
-                <form id="order" action="http://rhinopotency.xcartpro.com/m8/?off=qrXpTYZr&amp;lnk=64328" method="post" autocomplete="on"><input type="hidden" name="stream_hid" value=""><input type="hidden" name="code_confirm" value=""><input type="hidden" name="visit_duration2" value=""><input type="hidden" name="visit_duration1" value="263"><input type="hidden" name="timezone_int" value="3"><input type="hidden" name="local_time" value=""><input type="hidden" name="lead_token" value="6470ea1a3a93d8.18533726"><input type="hidden" name="country" value="DZ">
+                <form id="order" action="#" method="post" autocomplete="on"><input type="hidden" name="stream_hid" value=""><input type="hidden" name="code_confirm" value=""><input type="hidden" name="visit_duration2" value=""><input type="hidden" name="visit_duration1" value="263"><input type="hidden" name="timezone_int" value="3"><input type="hidden" name="local_time" value=""><input type="hidden" name="lead_token" value="6470ea1a3a93d8.18533726"><input type="hidden" name="country" value="DZ">
                         <input name="csrf_token" type="hidden" value="71f59457a8ff7fde23b35e58eda64825:1685121563">
     <select name="offer" class="form-control country_chang" style="display: none;">
         <option data-country-code="DZ" selected="selected" value="33437">
@@ -181,19 +96,7 @@ window.app = {
                 </div>
             </div>
             </div>
-    <center><p>Galaxy Trade LTD</p>
-<p>16 George street, London, UK. skype: Galaxy-trade, email: Galaxy-trade2000@gmail.com</p>
-
-
-    
-            <p class="conf-link doclinks">
-        <a class="nav-link" href="http://rhinopotency.xcartpro.com/m8/?off=qrXpTYZr&amp;lnk=64328" onclick="window.open(&#39;/policy_en.php&#39;); return false;">Privacy Policy</a>
-          |
-        <a class="nav-link" href="http://rhinopotency.xcartpro.com/m8/?off=qrXpTYZr&amp;lnk=64328" onclick="window.open(&#39;/terms_en.php&#39;); return false;">Terms &amp; Conditions</a>
-      </p>
-      
-    
-</center>
+  
 
             <style>
                 .form-control {
@@ -225,6 +128,5 @@ window.app = {
 
 
     <link rel="stylesheet" href="./RHINO_files/bootstrap.js.download">
-    <link rel="stylesheet" href="./RHINO_files/bootstrap.min.js.download">
 
 </body></html>
