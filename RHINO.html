@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)http://rhinopotency.xcartpro.com/m8/?off=qrXpTYZr&lnk=64328 -->
+<html lang="ar" nighteye="disabled" data-lt-installed="true"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<script src="./RHINO_files/jquery.min.js.download"></script>
+
+    <script>
+    function set_validator_errors(){
+        orderValidator.errorTitle = 'يرجى تصحيح الأخطاء التالية'; 
+
+        orderValidator.errorNameField = 'الاسم'; 
+        orderValidator.errorNameMess = 'أدخل أسمك'; 
+        
+        orderValidator.errorPhoneField = 'رقم التليفون'; 
+        orderValidator.errorPhoneMess = 'أدخل رقم الهاتف الصحيح'; 
+        
+        orderValidator.errorAddress = 'أدخل العنوان الصحيح'; 
+        orderValidator.errorRequired = 'يتطلب حقلا'; 
+        orderValidator.errorMaxLength = 'حرف {1} بحد أقصى صالح'; 
+        orderValidator.errorMinLength = 'الحد الأدنى لعدد حروف {1}'; 
+        orderValidator.errorEmailField = 'البريد الإلكتروني';
+        orderValidator.errorEmail = 'تم تحديد بريد إلكتروني غير صالح';
+        }
+    </script>
+    
+<script>
+
+
+window.app = {
+    timestamp: parseInt((new Date()).getTime() / 1000),
+    jq: jQuery,
+    formAction: window.location.href,
+    leadToken: '6470ea1a3a93d8.18533726',
+    offers: {"33437":{"id":33437,"country":{"code":"DZ","name":"\u0410\u043b\u0436\u0438\u0440"},"price":"5999","price2":"11998","currency":{"code":"DZD","name":"DA"},"discount":"","delivery_price":"","link":"","product_sku":"","prepaid_info_html":""}},
+    currentOffer: {"id":33437,"country":{"code":"DZ","name":"\u0410\u043b\u0436\u0438\u0440"},"price":"5999","price2":"11998","currency":{"code":"DZD","name":"DA"},"discount":"","delivery_price":"","link":"","product_sku":"","prepaid_info_html":""},
+    allowedCountries: ["DZ"],
+    _setOfferId: false,
+    streamHid: '',
+    showcaseUrl: '',
+    disablePhoneMask: Boolean(),
+    
+    setOffer: function (offerId) {
+        if (offerId == this._setOfferId) {
+            return ;
+        }
+        this._setOfferId = offerId;
+        if (offerId) {
+            var offer = app.offers[offerId];
+            var previousOffer = app.currentOffer;
+            app.currentOffer = offer;
+            var event = this.jq.Event("offerchange");
+            event.previousOffer = previousOffer;
+            event.currentOffer = app.currentOffer;
+            this.jq(document).trigger(event);
+            this.updatePage(offer);
+        } else {
+            $('input[name=country]').val('');
+        }
+    },
+    
+    updatePage: function(offer) {
+        $('x-newprice').html(offer.price);
+        $('x-oldprice').html(offer.price2);
+        $('x-currency').html(offer.currency.name);
+        $('input[name=offer], select[name=offer]').val(offer.id);
+        $('input[name=country]').val(offer.country.code);
+    },
+
+    blockForm: function() {
+        // Блокируем кнопки при отправке формы
+        $('input[type=submit]', $(this)).prop( 'disabled', true ).attr( 'disabled', true );
+        $('button', $(this)).prop( 'disabled', true ).attr( 'disabled', true );
+        app.incompleteOrder.lock = true;
+        clearTimeout(app.incompleteOrder.timer);
+    },
+
+    unblockForm: function() {
+        $('input[type=submit]', $(this)).prop( 'disabled', false ).attr( 'disabled', false );
+        $('button[type=submit]', $(this)).prop( 'disabled', false ).attr( 'disabled', false );
+        app.incompleteOrder.lock = false;
+        clearTimeout(app.incompleteOrder.timer);
+    }
+
+};
+
+
+</script><script src="./RHINO_files/form.validate.js.download"></script>
+<script src="./RHINO_files/interPhoneCodes.js.download"></script>
+<script src="./RHINO_files/showcase.js.download"></script>
+<script src="./RHINO_files/form.incomplete.js.download"></script>
+<script src="./RHINO_files/main2.js.download"></script>
+
+
+
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./RHINO_files/style.css">
+    <link rel="stylesheet" href="./RHINO_files/bootstrap.css">
+    <link rel="stylesheet" href="./RHINO_files/bootstrap.min.css">
+    <title>RHINO</title>
+    <script src="./RHINO_files/jquery.min.js(1).download"></script>
+</head>
+<body>
+    
+    <div class="container">
+
+<div class="row">
+            	<div class="col-xs-12 col-xl-12">
+                	<a href="http://rhinopotency.xcartpro.com/m8/?off=qrXpTYZr&amp;lnk=64328#order"><img src="./RHINO_files/1.png" alt=""></a>
+		
+                </div>
+            </div>
+<div class="row">
+            	<div class="col-xs-12 col-xl-12">
+                	<a href="http://rhinopotency.xcartpro.com/m8/?off=qrXpTYZr&amp;lnk=64328#order"><img src="./RHINO_files/2.png" alt=""></a>
+		
+                </div>
+            </div>
+<div class="row">
+            	<div class="col-xs-12 col-xl-12">
+                	<a href="http://rhinopotency.xcartpro.com/m8/?off=qrXpTYZr&amp;lnk=64328#order"><img src="./RHINO_files/3.png" alt=""></a>
+		
+                </div>
+            </div>
+<div class="row">
+            	<div class="col-xs-12 col-xl-12">
+                	<a href="http://rhinopotency.xcartpro.com/m8/?off=qrXpTYZr&amp;lnk=64328#order"><img src="./RHINO_files/4.png" alt=""></a>
+		
+                </div>
+            </div>
+<div class="row">
+            	<div class="col-xs-12 col-xl-12">
+                	<a href="http://rhinopotency.xcartpro.com/m8/?off=qrXpTYZr&amp;lnk=64328#order"><img src="./RHINO_files/5.png" alt=""></a>
+		
+                </div>
+            </div>
+<div class="row">
+            	<div class="col-xs-12 col-xl-12">
+                	<a href="http://rhinopotency.xcartpro.com/m8/?off=qrXpTYZr&amp;lnk=64328#order"><img src="./RHINO_files/6.png" alt=""></a>
+		
+                </div>
+            </div>
+			
+			
+			
+            </div>
+
+
+            <div style="padding: 20px;     max-width: 870px !important;" class="container">
+                <div style="border: 3px solid #318665;
+                border-radius: 14px;" class="row">
+
+                    <div style="padding: 13px;" class="col-lg-12">
+                <form id="order" action="http://rhinopotency.xcartpro.com/m8/?off=qrXpTYZr&amp;lnk=64328" method="post" autocomplete="on"><input type="hidden" name="stream_hid" value=""><input type="hidden" name="code_confirm" value=""><input type="hidden" name="visit_duration2" value=""><input type="hidden" name="visit_duration1" value="263"><input type="hidden" name="timezone_int" value="3"><input type="hidden" name="local_time" value=""><input type="hidden" name="lead_token" value="6470ea1a3a93d8.18533726"><input type="hidden" name="country" value="DZ">
+                        <input name="csrf_token" type="hidden" value="71f59457a8ff7fde23b35e58eda64825:1685121563">
+    <select name="offer" class="form-control country_chang" style="display: none;">
+        <option data-country-code="DZ" selected="selected" value="33437">
+            Алжир        </option>
+    </select>
+
+    
+                    <div class="form-group">
+                        <h3 style="color: #243a48;font-weight: 600;     font-size: 17px;">كل ما عليك هو كتابة إسمك و رقم هاتفك في النموذج بالأسفل و سوف يتم التواصل معك لتأكيد عنوان الوصول </h3>
+                        <img class="img-fluid" src="./RHINO_files/Untitled-1.png" alt="">
+                        <img src="./RHINO_files/1672355331.jpg" alt="">
+                        <p style="direction: rtl;font-size: 24px; margin-bottom: 0;">السعر قبل التخفيض : <span style="text-decoration: line-through;"><x-oldprice>11998</x-oldprice><x-currency>DA</x-currency></span></p>
+                        <p class="glow  mb-0" style="direction: rtl;">السعر بعد التخفيض : <span><x-newprice>5999</x-newprice><x-currency>DA</x-currency></span></p>
+                        <p style="direction: rtl;">عند حصولك علي دورة RHINO </p>
+
+                      <label class="my-3" style="     font-size: 21px;display: block !important; " for="formGroupExampleInput">الإسم</label>
+                      <input style="direction: rtl;" type="text" name="name" class="form-control" id="formGroupExampleInput" placeholder="ادخل اسمك " autocomplete="name" required="required">
+                    </div>
+                    <div class="form-group">
+                      <label style=" font-size: 21px;" class="my-3" for="formGroupExampleInput2">رقم الهاتف</label>
+                      <input type="tel" name="phone" style="direction: ltr;text-align: left;" class="form-control" id="formGroupExampleInput2" placeholder="+213" autocomplete="tel" required="required">
+                    </div>
+                    <button style="direction: rtl;" type="submit" class="btn btn-block btn-lg glow-button btn-success mt-3">اطلب RHINO الأن</button>
+
+                  </form>
+                </div>
+            </div>
+            </div>
+    <center><p>Galaxy Trade LTD</p>
+<p>16 George street, London, UK. skype: Galaxy-trade, email: Galaxy-trade2000@gmail.com</p>
+
+
+    
+            <p class="conf-link doclinks">
+        <a class="nav-link" href="http://rhinopotency.xcartpro.com/m8/?off=qrXpTYZr&amp;lnk=64328" onclick="window.open(&#39;/policy_en.php&#39;); return false;">Privacy Policy</a>
+          |
+        <a class="nav-link" href="http://rhinopotency.xcartpro.com/m8/?off=qrXpTYZr&amp;lnk=64328" onclick="window.open(&#39;/terms_en.php&#39;); return false;">Terms &amp; Conditions</a>
+      </p>
+      
+    
+</center>
+
+            <style>
+                .form-control {
+                    max-width: 68% !important;
+                    margin: auto !important;
+                }
+                img {
+                    max-width: -webkit-fill-available;
+                }
+                .glow {
+                    font-size: 41px;
+                    color: #981111;
+                    font-weight: bolder;
+                    text-align: center;
+                    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+            </style>
+
+
+
+    <link rel="stylesheet" href="./RHINO_files/bootstrap.js.download">
+    <link rel="stylesheet" href="./RHINO_files/bootstrap.min.js.download">
+
+</body></html>
